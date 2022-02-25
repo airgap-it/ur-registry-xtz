@@ -11,6 +11,7 @@ enum Keys {
   dataType,
   publicKey,
   keyType,
+  masterFingerprint,
 }
 
 export enum DataType {
@@ -23,6 +24,7 @@ type signRequestProps = {
   dataType: DataType;
   publicKey: Buffer;
   keyType: PublicKeyType;
+  masterFingerprint?: Buffer;
 };
 
 export class TezosSignRequest extends RegistryItem {
@@ -31,6 +33,7 @@ export class TezosSignRequest extends RegistryItem {
   private dataType: DataType;
   private publicKey: Buffer;
   private keyType: PublicKeyType;
+  private masterFingerprint: Buffer | undefined;
 
   getRegistryType = () => ExtendedRegistryTypes.XTZ_SIGN_REQUEST;
 
@@ -45,6 +48,7 @@ export class TezosSignRequest extends RegistryItem {
     this.dataType = args.dataType;
     this.publicKey = args.publicKey;
     this.keyType = args.keyType;
+    this.masterFingerprint = args.masterFingerprint;
   };
 
   public getRequestId = () => this.requestId;
@@ -52,6 +56,7 @@ export class TezosSignRequest extends RegistryItem {
   public getDataType = () => this.dataType;
   public getPublicKey = () => this.publicKey;
   public getkeyType = () => this.keyType;
+  public getMasterFingerprint = () => this.masterFingerprint;
 
   public toDataItem = () => {
     const map: Record<any /* Keys */, any> = {};
@@ -68,6 +73,8 @@ export class TezosSignRequest extends RegistryItem {
     map[Keys.publicKey] = this.publicKey;
     map[Keys.keyType] = this.keyType;
 
+    map[Keys.masterFingerprint] = this.masterFingerprint;
+
     return new DataItem(map);
   };
 
@@ -80,6 +87,8 @@ export class TezosSignRequest extends RegistryItem {
     const publicKey = map[Keys.publicKey];
     const keyType = map[Keys.keyType];
 
+    const masterFingerprint = map[Keys.masterFingerprint];
+
     const requestId = map[Keys.requestId]
       ? map[Keys.requestId].getData()
       : undefined;
@@ -90,6 +99,7 @@ export class TezosSignRequest extends RegistryItem {
       dataType,
       publicKey,
       keyType,
+      masterFingerprint,
     });
   };
 
