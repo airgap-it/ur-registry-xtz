@@ -1,0 +1,37 @@
+{
+  "name": "ur-registry-xtz",
+  "version": "0.0.1",
+  "description": "bc-ur-registry extension for Tezos",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "browserify": "tsc --project tsconfig.browserify.json && browserify ./dist/browserify/index.js -s urRegistryXtz | uglifyjs > ./dist/ur-registry-xtz.min.js",
+    "test": "ts-node --project tsconfig.browserify.json test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airgap-it/ur-registry-xtz.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airgap-it/ur-registry-xtz/issues"
+  },
+  "homepage": "https://github.com/airgap-it/ur-registry-xtz#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "@types/uuid": "^8.3.4",
+    "browserify": "^17.0.0",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5",
+    "uglify-js": "^3.15.1"
+  },
+  "dependencies": {
+    "@keystonehq/bc-ur-registry": "^0.4.4",
+    "bs58check": "^2.1.2",
+    "uuid": "^8.3.2"
+  }
+}
