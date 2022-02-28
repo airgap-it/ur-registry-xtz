@@ -40,7 +40,6 @@ if (decoder.isComplete() && decoder.isSuccess()) {
 ### Sharing Public Key
 
 ```typescript
-// Read part
 const pubKey = new TezosPublicKey({
   publicKey: Buffer.from(
     "190e4b0ed26eec520135c6deb5fd59434989ea811f1ccfc30205bea7816fa4ea",
