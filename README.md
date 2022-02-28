@@ -17,14 +17,15 @@ Apps that want to adopt this standard need to be able to show "animated" QR code
 ### Reading Public Key
 
 ```typescript
-// Read part
 const qrData =
   "ur:xtz-public-key/oxaohdcxcfbagrbatdjtwpgmadecswuerezchkfxgaldwdlyctcetksraoahrnoslyjloxwdaxadaafyjladzmspahjlfpinjpflhsjocxdpcxfwjlkpjtiaihnemttbmt";
 
 const decoder = new URRegistryDecoder();
 
+// "Receive" qr data that has been scanned
 decoder.receivePart(qrData);
 
+// Check if the data is complete
 if (decoder.isComplete() && decoder.isSuccess()) {
   const publicKey = TezosPublicKey.fromCBOR(decoder.resultUR().cbor);
 
@@ -50,6 +51,7 @@ const pubKey = new TezosPublicKey({
   label: "Test",
 });
 
+// Set size to something where QR codes are easily readable by scanners. This value is very low to simulate larger payloads.
 const qrSize = 10;
 
 const encoded = pubKey.toUREncoder(qrSize);
