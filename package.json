@@ -10,7 +10,7 @@
     "build": "tsc",
     "browserify": "tsc --project tsconfig.browserify.json && browserify ./dist/browserify/index.js -s urRegistryXtz | uglifyjs > ./dist/ur-registry-xtz.min.js",
     "test": "jest",
-    "example": "ts-node --project tsconfig.browserify.json test.ts"
+    "example": "ts-node --project tsconfig.browserify.json example.ts"
   },
   "repository": {
     "type": "git",
