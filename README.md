@@ -65,17 +65,12 @@ for (let x = 0; x < encoded.fragmentsLength * 2; x++) {
 
 ## Installing
 
-This package is currently not released on NPM because it's still in beta.
-
-To test it, simply copy the files from the `/src` folder into your own project.
-
-<!--
 To install, run:
 
 ```bash
-yarn add @airgap/ur-registry-tezos
+yarn add @airgap/ur-registry-xtz
 ```
 
 ```bash
-npm install --save @airgap/ur-registry-tezos
-``` -->
+npm install --save @airgap/ur-registry-xtz
+```
