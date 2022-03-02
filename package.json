@@ -1,6 +1,6 @@
 {
-  "name": "ur-registry-xtz",
-  "version": "0.0.1",
+  "name": "@airgap/ur-registry-xtz",
+  "version": "0.0.1-beta.0",
   "description": "bc-ur-registry extension for Tezos",
   "main": "dist/index.js",
   "files": [
