@@ -14,6 +14,8 @@ Apps that want to adopt this standard need to be able to show "animated" QR code
 
 > Take a look at `example.ts`. You can run it with `npm run example`
 
+> Check the tests for an example for every message type.
+
 ### Reading Public Key
 
 ```typescript
