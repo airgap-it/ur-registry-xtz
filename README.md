@@ -18,7 +18,7 @@ Apps that want to adopt this standard need to be able to show "animated" QR code
 
 This is an example of an animated QR code.
 
-[![Animated QR code](assets/animated-qr-demo.mov)](assets/animated-qr-demo.mov)
+https://user-images.githubusercontent.com/680814/172477732-d5f809e7-4809-49ae-938f-68c6238db292.mov
 
 It contains the following data:
 
