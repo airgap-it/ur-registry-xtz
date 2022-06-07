@@ -32,6 +32,12 @@ It contains the following data:
 }
 ```
 
+The following video is a demo where an offline device is sharing an account and the online device scans the animated QR code to import the account.
+
+> Note: The structure of the QR code is slightly different compared to this standard, but the behaviour is exactly the same.
+
+https://user-images.githubusercontent.com/680814/172479728-56634a88-3bdb-4aa5-96b9-00f36d98383f.mov
+
 ### Reading Public Key
 
 ```typescript
@@ -80,12 +86,6 @@ for (let x = 0; x < encoded.fragmentsLength * 2; x++) {
   // Do not "repeat" the QR codes, just keep calling "nextPart". The parts after 5/5 are technically not needed, but it contains parts of the previous QR codes and allows transmission to succeed, even if some QRs are lost.
 }
 ```
-
-This is a demo where an offline device is sharing an account and the online device scans the animated QR code to import the account.
-
-> Note: The structure of the QR code is slightly different compared to this standard, but the behaviour is exactly the same.
-
-https://user-images.githubusercontent.com/680814/172479728-56634a88-3bdb-4aa5-96b9-00f36d98383f.mov
 
 ## Installing
 
