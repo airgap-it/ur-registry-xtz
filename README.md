@@ -16,6 +16,22 @@ Apps that want to adopt this standard need to be able to show "animated" QR code
 
 > Check the tests for an example for every message type.
 
+This is an example of an animated QR code.
+
+[![Animated QR code](assets/animated-qr-demo.mov)](assets/animated-qr-demo.mov)
+
+It contains the following data:
+
+```
+{
+  requestId: '', // Random UUID
+  publicKey: '370ffb098088e67f8284ca4938f8f1eac02c3e2ab150f29adc8a7075a5ce7e63',
+  keyType: PublicKeyType.ED25519,
+  masterFingerprint: '73c5da0a',
+  label: 'Abandon'
+}
+```
+
 ### Reading Public Key
 
 ```typescript
