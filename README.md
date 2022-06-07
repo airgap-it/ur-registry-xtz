@@ -81,6 +81,12 @@ for (let x = 0; x < encoded.fragmentsLength * 2; x++) {
 }
 ```
 
+This is a demo where an offline device is sharing an account and the online device scans the animated QR code to import the account.
+
+> Note: The structure of the QR code is slightly different compared to this standard, but the behaviour is exactly the same.
+
+https://user-images.githubusercontent.com/680814/172479728-56634a88-3bdb-4aa5-96b9-00f36d98383f.mov
+
 ## Installing
 
 To install, run:
